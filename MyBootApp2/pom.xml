@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"><!-- 메이븐의 스키마 정의하는 XSD라는 파일의 URL -->
+	<modelVersion>4.0.0</modelVersion>
+	<parent> <!-- pom.xml의 상속에 관한 설정 정보 -->
+		<groupId>org.springframework.boot</groupId> <!-- org.springframework.boot를 가져와서 -->
+		<artifactId>spring-boot-starter-parent</artifactId> <!-- spring-boot-starter-parnet라는 pom이 상속돼서 모든 정보 재사용가능하다.  -->
+		<version>2.6.3</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.tuyano.springboot</groupId>
+	<artifactId>MyBootApp2</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>MyBootApp2</name>
+	<description>sample project for Spring Boot</description>
+	<properties>
+		<java.version>11</java.version> <!-- 자바버전 지정  -->
+	</properties>
+	<dependencies>
+		<dependency> <!-- 웹애플리케이션용 라이브러리와 단위 테스트 용 라이브러리  --> <!-- 메이븐을 통해 생성한 pom.xml의 junit dependency는 태그는 여기선 필요없다 - why? 정보검색필요  -->
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency> <!-- 스프링 부트의 단위 테스트 관련 라이브러리  -->
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+	<!--  <dependency>
+    	<groupId>javax.servlet</groupId>
+    	<artifactId>jstl</artifactId>
+	</dependency>
+	<dependency>
+    	<groupId>org.apache.tomcat.embed</groupId>
+    	<artifactId>tomcat-embed-jasper</artifactId>
+	</dependency>-->
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-data-jpa</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>org.hsqldb</groupId>
+		<artifactId>hsqldb</artifactId>
+		<scope>runtime</scope>
+	</dependency>
+	<dependency>
+  		<groupId>org.hibernate</groupId>
+  		<artifactId>hibernate-validator</artifactId>
+  		<version>6.0.7.Final</version>
+	</dependency>
+	</dependencies>
+	<build> <!-- maven으로 만든 pom.xml에서는 없는 것, 빌드 시에 사용할 플러그인 프로그램 관련 정보 기술 -->
+		<plugins>
+			<plugin> <!-- 이 플러그인을 통해 스프링 부트 애플리케이션을 단독으로 실행할 수 있게 해준다.  -->
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+ <title>top page</title>
+<meta http-equiv="Content-Type"
+ content="text/html; charset=UTF-8" />
+<style>
+h1 { font-size:18pt; font-weight:bold; color:gray; }
+body { font-size:13pt; color:gray; margin:5px 25px; }
+</style>
+</head>
+<body>
+<h1>Helo page</h1><!-- 변수식과 OGNL2 -->
+<p th:text = "'from parameter... id=' + ${param.id[0] + ',name=' + param.name[0]}"></p> <!-- url에 매개변수 입력 후 이를 받아와서 웹페이지에 반환 -->
+</body>
+</html>

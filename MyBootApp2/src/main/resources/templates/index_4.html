@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>top page</title>
+<style>
+h1 { font-size:18pt; font-weight:bold; color:gray; }
+body { font-size:13pt; color:gray; margin:5px 25px; }
+pre { font-size:13pt; color:gray; padding:5px 10px; border:1px solid gary;}
+</style>
+</head>
+<body>
+  <h1>Helo page</h1>
+  <pre th:text="${msg}"> please wait... </pre> <!-- 3 --> <!-- HeloController__templet_2_8 -->
+  <form method="post" action="/">
+  <div>
+  <input type="checkbox" id="check1" name="check1" /> <!-- 체크박스 선택상태를 참 겆짓 값으로 전달할 수 있는 체크박스 -->
+  <label for="check1">체크</label>
+  </div>
+  <div>
+  <input type="radio" id="radioA" name="radio1" value="male" /><!-- 라디오 버튼 선택한 항목의 value를 String으로 전달한다. 미선택인 경우 null이 된다. -->
+  <label for="radioA">남성</label>
+  </div>
+  <div>
+  <input type="radio" id="radioB" name="radio1" value="female"/>
+  <label for="radioB">여성</label>
+  </div>
+  <div>
+  <select id="select1" name="select1" size="4"><!-- 선택리스트 단일 항목만 선택하는 경우 선택한 항목을 String으로 전달한다. 여러항목을 선택할 수 있는 경우 선택한 각 항목을 하나로 모아서 String 배열로 전달한다. 아무것도 선택하지 않는 경우 null 이된다. -->
+  	<option value="Windows">Windows</option>
+  	<option value="Mac">Mac</option>
+  	<option value="Linux">Linux</option>
+  </select>
+  <select id="select2" name="select2" size="4" multiple="multiple">
+  	<option value="Android">Android</option>
+  	<option value="iPhone">iPhone</option>
+  	<option value="Winfone">Windows phone</option>
+  </select>
+  </div>
+  	<input type= "submit" value="Click"/>
+  </form>	
+</body>
+</html>
