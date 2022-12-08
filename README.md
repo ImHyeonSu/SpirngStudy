@@ -10,9 +10,9 @@ the overall study of spring boots
  - JDK : 11
  - Tomcat : 8.5
  - DB  : Oracle 11xe
- - Eclipse : 最後のVersion
+ - Middleware : Eclipse 4.19
  - SpringBoot  : 2.6.4
- - Dependency : Rombook, JPA, Thymeleaf, Spring Web, validation ~~
+ - Dependency : Rombook, JPA, Thymeleaf, Spring Web, validation 
  
 ## Study contents
- - 
+ - Timeleaf, How to use the, How to use the JPA, Entity and Repository, Validation, CRUD, DB 
